@@ -27,11 +27,11 @@ public class MinhaListaTarefasApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 		Lista lista1 = new Lista(null, "Minha Lista");
-		Tarefa tarefa1 = new Tarefa(null, "Item 1", lista1);
-		Tarefa tarefa2 = new Tarefa(null, "Item 2", lista1);
-		Tarefa tarefa3 = new Tarefa(null, "Item 3", lista1);
-		Tarefa tarefa4 = new Tarefa(null, "Item 4", lista1);
-		Tarefa tarefa5 = new Tarefa(null, "Item 5", lista1);
+		Tarefa tarefa1 = new Tarefa(null, "Item 1", lista1, false);
+		Tarefa tarefa2 = new Tarefa(null, "Item 2", lista1, false);
+		Tarefa tarefa3 = new Tarefa(null, "Item 3", lista1, false);
+		Tarefa tarefa4 = new Tarefa(null, "Item 4", lista1, false);
+		Tarefa tarefa5 = new Tarefa(null, "Item 5", lista1, false);
 		
 		listaRepo.save(lista1);
 		tarefaRepo.save(tarefa1);
