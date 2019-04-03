@@ -13,7 +13,6 @@ import br.senai.sc.repositories.TarefaRepository;
 @SpringBootApplication
 public class MinhaListaTarefasApplication implements CommandLineRunner {
 
-
 	@Autowired
 	private ListaRepository listaRepo;
 	@Autowired
@@ -32,14 +31,14 @@ public class MinhaListaTarefasApplication implements CommandLineRunner {
 		Tarefa tarefa3 = new Tarefa(null, "Item 3", lista1, false);
 		Tarefa tarefa4 = new Tarefa(null, "Item 4", lista1, false);
 		Tarefa tarefa5 = new Tarefa(null, "Item 5", lista1, false);
-		
+
 		listaRepo.save(lista1);
 		tarefaRepo.save(tarefa1);
 		tarefaRepo.save(tarefa2);
 		tarefaRepo.save(tarefa3);
 		tarefaRepo.save(tarefa4);
 		tarefaRepo.save(tarefa5);
-		
+
 	}
 
 }

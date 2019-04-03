@@ -12,19 +12,18 @@ import javax.persistence.ManyToOne;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-public class Tarefa implements Serializable{
+public class Tarefa implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
 	private Boolean concluido;
-	
+
 	@JsonIgnore
 	@ManyToOne
-	@JoinColumn(name="lista_id")
+	@JoinColumn(name = "lista_id")
 	private Lista lista;
 
 	public Tarefa() {
@@ -38,8 +37,6 @@ public class Tarefa implements Serializable{
 		this.lista = lista;
 		this.concluido = concluido;
 	}
-	
-	
 
 	public Boolean getConcluido() {
 		return concluido;
@@ -97,7 +94,5 @@ public class Tarefa implements Serializable{
 			return false;
 		return true;
 	}
-	
-	
 
 }
